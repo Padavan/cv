@@ -1,0 +1,73 @@
+%!TEX output_directory=dist
+\documentclass[12pt, a4paper]{moderncv}
+\usepackage{palatino}
+\usepackage[scale=0.80]{geometry}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption}
+\setlength{\hintscolumnwidth}{4cm}
+%personal data
+\firstname{Dmitriy}
+\familyname{Shikhaleev}
+\title{Web Developer}
+\address{St. Petersburg}
+\mobile{+79602408223}
+\email{dmitriy.shihaleev@gmail.com}
+% \social[github]{Padavan}
+% \photo[64pt]{photo.jpg}
+\nopagenumbers{}
+
+\begin{document}
+\begin{flushleft}
+\maketitle
+
+%\section{Objective}
+%BlahBlah
+
+\section{Education}
+\cventry{2008 -- 2016}{Bachelor's degree in Nanoelectronics}{}{}{}{Peter the Great St. Petersburg Polytechnic University}{}
+
+
+\section{Experience}
+\cventry{2017 -- 2018}{Fronted Developer}{Chronist}{St. Petersburg}{}{}
+% Responsibilities:
+% \newline{}
+% \begin{itemize}
+% \item Responsible for design and development of the web pages in several projects
+% \item Developed custom web application interfaces using JSX and CSS
+% \item Utilized HTML5 local Storage, Metric System like Google Analytics and Yandex Metrika
+% \item Making pages responible using Bootstrap/CSS Grids
+% \item Followed Agile Software Development Methodology in the progress of the project.
+% \item Working on React ecosystem with state management systems (Mobx/Redux)
+% \item  Environment:  Gitlab, Webpack, npm, nodejs, docker, LESS, JSON, JSX, React/Redux, React/Mobx.
+% \end{itemize}}
+\cventry{2014 -- 2017}{Support Specialist}{National Cable Networks}{St. Petersburg}{}{}
+
+\section{Skills}
+\cventry{Web Development}{Experienced}{}{}{}{
+\begin{itemize}
+\item Experience in developing  web applications using JavaScript, HTML5, CSS3, REST
+\item High performance frameworks (React), stage management systems (Redux, Mobx) and different JS dialects (ES5/ES2015)
+\item Solid understanding of CSS, and CSS preprocessors like LESS or Sass
+\item Responsive applications and design principals for desktop and mobile screens
+\item Experience with visualization frameworks (d3.js)
+\item Experience with version control system tools such as Git/GitHub
+\item Good knowledge of the web development toolchain: \newline{} git, npm, webpack
+\item Experience with Docker containers
+\end{itemize}}
+
+\cventry{Linux}{Strong experience}{development, daily usage}{}{}{}
+%\cventry{R}{Good knowledge}{import and data wrangling for downstream analysis. Automatic report generation with knitr and caret}{}{}{}
+
+ % (…ваши библиотеки…), data visualization (…), reporting (…), export/import
+\cventry{R}{Good knowledge}{data analysis, machine learning (caret), data visualization (ggplot2/base plot), report generation (knitr, rmarkdown)}{}{}{}
+\cventry{Python}{Good knowledge}{data analysis, desktop application development (Qt, Tk)}{}{}{}
+\cventry{C}{Good knowledge}{low-level development for embedded devices}{}{}{}
+
+\section{Languages}
+\cvitemwithcomment{}{English, Russian}{}
+
+\end{flushleft}
+\end{document}
