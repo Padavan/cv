@@ -1,0 +1,107 @@
+%!TEX output_directory=dist
+\documentclass[11pt, a4paper, sans]{moderncv}
+\usepackage[utf8]{inputenc}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+%
+\usepackage[scale=0.8]{geometry}
+\recomputelengths
+
+% \usepackage{graphicx} %maybe obsolete, but no time to check it out
+% \usepackage[margin=10pt,font=small,labelfont=bf]{caption} %for figures
+\setlength{\hintscolumnwidth}{4cm}
+%personal data
+\firstname{Dmitrii}
+\familyname{Shikhaleev}
+%\title{Curriculum vitae}
+\address{St.Petersburg}
+\mobile{+79602408223}
+\email{padavankun@gmail.com}
+\social[github]{Padavan}
+%\nopagenumbers{}
+
+% \newcommand{\cvdoublecolumn}[2]{%
+%   \cvitem[0.75em]{}{%
+%     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+%     \hfill%
+%     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+%     }%
+% }
+
+% usage: \cvreference{name}{address line 1}{address line 2}{address line 3}{address line 4}{e-mail address}{phone number}
+% Everything but the name is optional
+% If \addresssymbol, \emailsymbol or \phonesymbol are specified, they will be used.
+% (Per default, \addresssymbol isn't specified, the other two are specified.)
+% If you don't like the symbols, remove them from the following code, including the tilde ~ (space).
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+	 \ifthenelse{\equal{#6}{}}{}{\texttt{#6}\newline}%
+    %\ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+
+
+\begin{document}
+\maketitle
+
+
+% PROFILE
+\section{Profile}
+UX Engineer with profound knowledge of HTML, CSS, and JavaScript. Experience in developing React based applications.
+
+% SKILLS
+\section{Skills}
+\cvlistitem{High amount of experience and proficiency in React.js framework and Vue.js}
+\cvlistitem{High level of experience of TypeScript/ JavaScript ES6.}
+\cvlistitem{Various State management systems (Redux, Mobx, Zustand, XState).}
+\cvlistitem{Experienced with GraphQL, REST.}
+\cvlistitem{Electron application development with file system communication using Node.js}
+\cvlistitem{Experience with Web Workers, Web Sockets, Chrome extension development,
+Node.js backend (expresss).}
+\cvlistitem{Solid understanding of CSS and CSS postprocessors/ preprocessors.}
+\cvlistitem{Experience with visualization libraries (D3.js) and date manipulation libraries (day.js,
+moment.js, date- fns) other npm packages and webpack build system.}
+
+\cvlistitem{Experience with Linux. Simple bash- script/ systemd services writing and good under-
+standing of UNIX tool.}
+\cvlistitem{Experience with Docker containers and Red Hat OpenShift platform.}
+\cvlistitem{Python. Data analysis (pandas) and scripting.}
+\cvlistitem{Experienced in distributed development and remote collaboration.}
+\cvlistitem{Reached high level of proficiency in Agile methodology.}
+\cvlistitem{Languages. Russian - native. English - B2}
+
+% EXPERIENCE
+\section{Experience}
+
+\subsection{Jan 2019 --- Jul 2019. Competentum, St. Petersburg}
+\emptysection
+\cvline{Jan 2019 --- Jul 2019}{Competentum, St. Petersburg}
+Competentum is a full-stack educational content services company that focuses primarily on developing and optimizing educational solutions, with digital learning platforms and services that are pre-integrated to provide a smartly designed, interactive learner experience.
+\cvlistitem{Participated in development of VR Traning solution with WebRTC and SaaS platform
+for automating the virtual training process and schedulings in B2B setting.}
+\cvlistitem{Created a custom web app to support scheduling for training session}
+\cvlistitem{Duties included Agile front- end web- development using React, Redux, TypeScript
+and Moment.js.}
+
+\cvline{2017 - 2018}{Chronist, St. Petersburg}
+Chronist is an educational online platform that offers a draggable map and the possibility to travel in time on this map. Apart from that the system of layers allows users to create their own narratives based on the interconnections of certain events and environments.
+\cvlistitem{Responsible for project landing page and map controls in web app.}
+
+
+% EDUCATION
+\section{Education}
+\cvline{2008 - 2016}{Bachelor's degree in Nanoelectronics. St.Petersburg Polytechnic University. Russia}
+
+% \vspace{9em}
+
+
+\end{document}
