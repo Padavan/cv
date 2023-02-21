@@ -1,107 +1,126 @@
 %!TEX output_directory=dist
 \documentclass[11pt, a4paper, sans]{moderncv}
-\usepackage[utf8]{inputenc}
 \moderncvstyle{banking}
 \moderncvcolor{blue}
+% \setlength{\hintscolumnwidth}{4cm}
+\usepackage{lmodern}
+\usepackage{latexsym}
+% \usepackage{amssymb} % for item symbols
+% \usepackage[defaultfam,tabular,lining]{montserrat}
+% \usepackage[T1]{fontenc}
+\usepackage[scale=0.8, top=1.5cm, bottom=1.5cm]{geometry}
 
-\usepackage[defaultfam,tabular,lining]{montserrat}
-\usepackage[T1]{fontenc}
-\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
-%
-\usepackage[scale=0.8]{geometry}
-\recomputelengths
+% \AtBeginDocument{\hypersetup{pdfborder = 0 0 1,linkcolor=blue}}
+\renewcommand{\listitemsymbol}{$\, \bullet \,$ }
+% \renewcommand{\rmdefault}{lmr}
+% \renewcommand{\sfdefault}{lmss}
+% \renewcommand{\ttdefault}{lmtt}
+\renewcommand{\baselinestretch}{1} 
+% \renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
-% \usepackage{graphicx} %maybe obsolete, but no time to check it out
-% \usepackage[margin=10pt,font=small,labelfont=bf]{caption} %for figures
-\setlength{\hintscolumnwidth}{4cm}
-%personal data
+% blue color scheme colors
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+
+% \titlespacing*{\section}
+% {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\par%
+
+
+
 \firstname{Dmitrii}
 \familyname{Shikhaleev}
-%\title{Curriculum vitae}
-\address{St.Petersburg}
-\mobile{+79602408223}
-\email{padavankun@gmail.com}
-\social[github]{Padavan}
-%\nopagenumbers{}
-
-% \newcommand{\cvdoublecolumn}[2]{%
-%   \cvitem[0.75em]{}{%
-%     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
-%     \hfill%
-%     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
-%     }%
-% }
-
-% usage: \cvreference{name}{address line 1}{address line 2}{address line 3}{address line 4}{e-mail address}{phone number}
-% Everything but the name is optional
-% If \addresssymbol, \emailsymbol or \phonesymbol are specified, they will be used.
-% (Per default, \addresssymbol isn't specified, the other two are specified.)
-% If you don't like the symbols, remove them from the following code, including the tilde ~ (space).
-
-\newcommand{\cvreference}[7]{%
-    \textbf{#1}\newline% Name
-    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
-    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
-    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
-    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
-	 \ifthenelse{\equal{#6}{}}{}{\texttt{#6}\newline}%
-    %\ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
-    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
-
-
+\address{Software Engineer}
 
 \begin{document}
-\maketitle
+% TITLE
+\textcolor{color1}{\textbf{\Huge Dmitrii Shikhaleev}} \par
+\vspace{0.2cm}
+\textcolor{color2}{\Large Software Engineer} \par
+\vspace{0.2cm}
 
+\textcolor{color2}{\small
+    \href{tel:+905312587445}{+905312587445}
+    % \hspace{0.2cm}
+    $\bullet$
+    % \hspace{0.2cm}
+    \href{mailto://dmitrii.shikhaleev@gmail.com}{dmitrii.shikhaleev@gmail.com}
+    % \hspace{0.2cm}
+    $\bullet$
+    % \hspace{0.2cm}
+    Antalya, Turkey
+}
+
+\textcolor{color2}{\small
+    \href{https://www.linkedin.com/in/dmitrii-shikhaleev}{linkedin.com/in/dmitrii-shikhaleev}
+    $\bullet$
+    \href{https://github.com/Padavan}{github.com/Padavan}
+}
+
+\vspace{0.4cm}
 
 % PROFILE
 \section{Profile}
-UX Engineer with profound knowledge of HTML, CSS, and JavaScript. Experience in developing React based applications.
+Front-End Software Engineering professional with 5+ year of production experience. My main focus is on building products based on web technologies. I've been able to be flexible and deliver quickly. 
+
 
 % SKILLS
-\section{Skills}
-\cvlistitem{High amount of experience and proficiency in React.js framework and Vue.js}
-\cvlistitem{High level of experience of TypeScript/ JavaScript ES6.}
-\cvlistitem{Various State management systems (Redux, Mobx, Zustand, XState).}
-\cvlistitem{Experienced with GraphQL, REST.}
-\cvlistitem{Electron application development with file system communication using Node.js}
-\cvlistitem{Experience with Web Workers, Web Sockets, Chrome extension development,
-Node.js backend (expresss).}
-\cvlistitem{Solid understanding of CSS and CSS postprocessors/ preprocessors.}
-\cvlistitem{Experience with visualization libraries (D3.js) and date manipulation libraries (day.js,
-moment.js, date- fns) other npm packages and webpack build system.}
+\section{Skills}\addvspace{0.2cm}
 
-\cvlistitem{Experience with Linux. Simple bash- script/ systemd services writing and good under-
-standing of UNIX tool.}
-\cvlistitem{Experience with Docker containers and Red Hat OpenShift platform.}
-\cvlistitem{Python. Data analysis (pandas) and scripting.}
+\cvlistitem{Extensive experience and knowledge of the React ecosystem.}
+\cvlistitem{Proficient working with JavaScript as well as TypeScript. Experience with Node.js and Electron.}
+\cvlistitem{Worked with various State management systems for React - Redux, Mobx, Zustand, XState.}
+\cvlistitem{Experience with GraphQL, REST.}
+\cvlistitem{Experience with WebApi (Web Workers, Web Sockets, Chrome extension development).}
+\cvlistitem{Solid understanding of CSS and CSS post/preprocessors.}
+\cvlistitem{Experience with a variety of JS libraries (D3.js, moment.js, ag-grid, RxJS, lodash).}
+\cvlistitem{Agile. Participation in Scrum activities, daily communication with the customer.}
+\cvlistitem{Experience with Linux. Basic bash/python scripting and good understanding of UNIX tools.}
+\cvlistitem{Know what CI/CD is. Builded Docker containers, worked with AWS services, kubernetes.}
 \cvlistitem{Experienced in distributed development and remote collaboration.}
-\cvlistitem{Reached high level of proficiency in Agile methodology.}
-\cvlistitem{Languages. Russian - native. English - B2}
+\cvlistitem{Languages. English - advanced, Russian - native}
 
-% EXPERIENCE
+% EXPERIENCE ----------------------------------------------------------------------------------------------------------
 \section{Experience}
 
-\subsection{Jan 2019 --- Jul 2019. Competentum, St. Petersburg}
-\emptysection
-\cvline{Jan 2019 --- Jul 2019}{Competentum, St. Petersburg}
-Competentum is a full-stack educational content services company that focuses primarily on developing and optimizing educational solutions, with digital learning platforms and services that are pre-integrated to provide a smartly designed, interactive learner experience.
-\cvlistitem{Participated in development of VR Traning solution with WebRTC and SaaS platform
-for automating the virtual training process and schedulings in B2B setting.}
-\cvlistitem{Created a custom web app to support scheduling for training session}
-\cvlistitem{Duties included Agile front- end web- development using React, Redux, TypeScript
-and Moment.js.}
+%% EPAM
+\textbf{\Large EPAM Systems Inc.} \par\addvspace{0.1cm}
+\cvitem{Software Engineer}{Jan 2019 --- Present}
 
-\cvline{2017 - 2018}{Chronist, St. Petersburg}
-Chronist is an educational online platform that offers a draggable map and the possibility to travel in time on this map. Apart from that the system of layers allows users to create their own narratives based on the interconnections of certain events and environments.
-\cvlistitem{Responsible for project landing page and map controls in web app.}
+\textit{EPAM Systems is a technology company that offers software engineering services for software development and digital platforms. I worked for a diverse range of clients in web development. Current and former clients include Adidas AG, Sygenta AG, Vizgen Inc, Mursion Inc.}
+\vspace{0.2cm}
 
+\cvlistitem{Have delivered multiple products to MVP/first customer stage.}
+\cvlistitem{Participated in scrum activities: daily meetings with customers, sprint plannings, groomings, retrospectives, performed task breakdown, efforts estimation.}
+\cvlistitem{Conducted demo sessions.}
+\cvlistitem{Successfully maintained multiple long-term projects.}
+\cvlistitem{Achieved self-sufficiency, so productivity wasn't decreased in absence of senior engineers.}
+\cvlistitem{Deploying/Integrating cloud solutions.}
+\cvlistitem{Implementing CI/CD pipeline.}
+\cvlistitem{Implemented auth processes through SSO/cloud services.}
+\cvlistitem{Implemented Microfrontend architecture based on Webpack Module Federation.}
 
-% EDUCATION
+\vspace{1em}
+%% Chronist
+\textbf{\Large Chronist LLC} \par\addvspace{0.1cm}
+\cvitem{Software Engineer}{Jan 2017 --- Jan 2019}
+
+\textit{Chronist is an educational online platform that offers interactive map and the possibility to travel in time on this map. Apart from that the system of layers allows users to create their own narratives based on the interconnections of certain events and environments.}
+\vspace{0.2cm}
+
+\cvlistitem{Took part in design discussions/decision-making processes.}
+\cvlistitem{Implementing mockups for frontend interface for MVP.}
+\cvlistitem{Built the landing page for the project.}
+\cvlistitem{Made calculations and implementation for several animation and maps interaction tasks.}
+
+% EDUCATION ------------------------------------------------------------------------------------------------------------
 \section{Education}
-\cvline{2008 - 2016}{Bachelor's degree in Nanoelectronics. St.Petersburg Polytechnic University. Russia}
+\textbf{\Large Peter the Great St.Petersburg Polytechnic University} \par\addvspace{0.1cm}
+\cvitem{Bachelor}{2008 --- 2016}
+Electronics and Nanoelectronics
 
-% \vspace{9em}
+\vspace{9em}
 
 
 \end{document}
