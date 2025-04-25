@@ -1,0 +1,156 @@
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage{lmodern}
+\usepackage[sfdefault]{inter}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{setspace}
+
+% columns
+\usepackage{blindtext}
+\usepackage{multicol}
+
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{ColorBlack}{HTML}{000000}% black
+\definecolor{ColorBlue}{HTML}{3873B3}% light blue
+\definecolor{ColorGrey}{HTML}{333333}% darkdark grey
+\definecolor{ColorLightGrey}{HTML}{DCDCDC}% darkdark grey
+\definecolor{ColorGrey2}{HTML}{5A5A5A}
+
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=ColorBlue,
+  filecolor=magenta,      
+  urlcolor=ColorBlack,
+  pdftitle={Dmitrii Shikhaleev - CV},
+  pdfpagemode=FullScreen,
+}
+\usepackage[margin=1cm]{geometry}
+% \usepackage[defaultfam,light,tabular,lining]{montserrat} %% Option 'defaultfam'
+\usepackage[skip=0pt plus1pt, indent=0pt]{parskip}
+
+\makeatletter
+\def\bfseries@sf{m}
+\makeatother
+
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\title{CV}
+\author{Dmitrii Shikhaleev}
+
+% \setlength{\parindent}{0cm}
+
+\titleformat{\section}
+{\Large\bfseries\color{ColorBlack}}
+{}
+{0em}
+{}[{\color{ColorLightGrey}\titlerule[2pt]}]
+
+\newcommand{\cvdate}[1]{
+  {\small\narrower\normalfont\color{ColorGrey2}{#1}}
+}
+\newcommand{\cvposition}[1]{\normalsize\textbf{#1}}
+\newcommand{\cvcompany}[1]{\Large\textbf{#1}}
+\newcommand{\cvproject}[1]{
+  \begingroup
+  \fontseries{sb}\color{ColorGrey2}\small{#1}
+  \endgroup
+}
+
+\newcommand{\cventry}[3]{
+  % \vspace{1em}
+  \cvcompany{#1} \hfill \break
+  \cvposition{#2} \hfill \cvdate{#3}\break 
+  % \vspace{3pt}\hfill\break
+  \vspace{-1em}
+}
+
+\renewcommand{\maketitle}{
+  \noindent
+
+  \begin{minipage}[t]{0.5\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+      {\Large\color{ColorGrey}\textbf{\theauthor}} \hfill\break
+      Software Engineer \hfill\break
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[t]{0.5\textwidth}
+  \begin{flushright}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+    \href{mailto:dmitrii.shikhaleev@gmail.com}{dmitrii.shikhaleev@gmail.com} \\
+    \href{tel:+905312587445}{+90~(531)~258~74~45} \\
+    \href{http://t.me/padavanchik}{t.me/padavanchik} \\ 
+    \href{https://www.linkedin.com/in/dmitrii-shikhaleev/}{linkedin.com/in/dmitrii-shikhaleev} \\
+  \end{flushright}
+  \end{minipage}
+
+  \vspace{0.8em}
+}
+
+\newcommand{\cvlistitem}[1]{
+  \begin{minipage}[t]{\textwidth}
+  \strut\hspace{0.5em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}\hspace{0.5em}#1
+  \vspace{2pt}
+  \end{minipage}
+}
+
+\pagenumbering{gobble}
+
+\begin{document}
+\maketitle
+\setstretch{1.1}
+
+Front-End Software Engineering professional with 5+ year of production experience. My main focus is on building products based on web technologies. I've been able to be flexible and deliver quickly. 
+
+% SKILLS ------------------------------
+\section{Skills / Technologies}
+
+\cvlistitem{React, JavaScript/TypeScript, Node.JS, Electron, GraphQL, REST, WebSockets, AWS/GCP cloud infrastructure}%
+\cvlistitem{Git, Docker, Nginx, Linux, Python Bash, Various CI/CD}%
+\cvlistitem{Languages: English (Advanced), Russian (Native), German (Basic)}%
+
+% EXPERIENCE --------------------------------
+\section{Professional Experience}
+
+%% EPAM
+\cventry
+{EPAM Systems Inc.}
+{Software Engineer}
+{Jan 2019 -- Present}
+
+EPAM Systems is a technology company providing software engineering services for software development and digital platforms. I have worked for a wide range of clients (pharmaceutical, biotech, retail, edtech) in different positions (developer/key developer) and products in web development.
+\break
+
+\cvlistitem{Led a team of three developers, driving code reviews, and architectural decisions}
+\cvlistitem{Improved system performance by introducing parallelism.}
+\cvlistitem{Enhanced internal API, test coverage, and code reliability}
+\cvlistitem{Integrated web application with cloud: AWS Cognito and AWS AppSync.}
+\cvlistitem{Responsible for implementing socket connection, inter-process communication between electron app, local machine service and remote machine service.}
+\cvlistitem{Facilitated the introduction of finite state machine state management to the project.}
+\cvlistitem{Helped with communication between science team, web team and infrastructure team.}
+
+%% Chronist
+\cventry
+{Chronist LLC.}
+{Software Engineer}
+{Jan, 2017 -- Jan, 2019}
+
+Chronist is an online educational platform that offers an interactive map and the possibility to travel through time on this map.
+
+\cvlistitem{Participation in design discussions/decision making processes.}
+\cvlistitem{Implemented mock-ups for front-end interface for MVP.}
+\cvlistitem{Created the landing page for the project.}
+\cvlistitem{Calculated and implemented various animations and map interaction tasks.}
+
+% EDUCATION
+\section{Education}
+
+\cventry{Peter the Great St.Petersburg Polytechnic University}{Bachelor}{Sep, 2008 -- Jun, 2016}
+\cvlistitem{Electronics and Nanoelectronics}
+
+
+\end{document}

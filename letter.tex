@@ -1,54 +1,118 @@
-%!TEX output_directory=dist
-\documentclass[11pt, a4paper, sans]{moderncv}
-\moderncvstyle{banking}
-\moderncvcolor{blue}
+\documentclass[11pt, a4paper]{article} 
+
 \usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
 \usepackage{latexsym}
-\usepackage[scale=0.8, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[skip=14pt plus2pt, indent=0pt]{parskip}
 
-% blue color scheme colors
-\definecolor{color0}{rgb}{0,0,0}% black
-\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
-\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+% xcolor setup
+\definecolor{ColorBlack}{RGB}{0,0,0}% black
+\definecolor{ColorBlue}{RGB}{50,103,161} % two tone darker blue
+\definecolor{ColorLightGrey}{RGB}{220,220,220}% light grey for titlerule
+\definecolor{ColorGrey}{RGB}{90,90,90} % date emphasis
 
-\name{Dmitrii}{Shikhaleev}
-\title{Software Engineer} 
-\address{Turkiye, Antalya}
-\social[linkedin]{dmitrii.shikhaleev} 
-\social[github]{Padavan}
-\phone[mobile]{+7~(960)~240~8223}
-\email{dmitrii.shikhaleev@gmail.com}
+% hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=ColorBlue,
+    filecolor=magenta,      
+    urlcolor=ColorBlue,
+    pdftitle={CV},
+    pdfpagemode=FullScreen,
+}
+
+\author{Dmitrii Shikhaleev}
+\title{Senior Fullstack Developer}
+
+\newcommand{\cvdate}[1]{\small\narrower\textit{#1}}
+\newcommand{\cvposition}[1]{\normalsize\textbf{#1}}
+\newcommand{\cvcompany}[1]{\Large\textbf{#1}}
+\newcommand{\cvproject}[1]{
+    \begingroup
+    \fontseries{sb}\color{ColorGrey}\small{#1}
+    \endgroup
+}
+\newcommand{\divider}{
+    {\color{ColorGrey}|}
+}
+
+\newcommand{\thecontacts}{
+    {\bfseries{Visa:}} Germany Opportunity Card \hfill
+    \hfill\hspace{0.2em} \break \hspace{0.2em}
+    {\bfseries{Mail:}} \href{mailto:dmitrii.shikhaleev@gmail.com}{dmitrii.shikhaleev@gmail.com}
+    \hfill\hspace{0.2em} \break \hspace{0.2em} 
+    {\bfseries{Phone:}} \href{tel:+905312587445}{+905312587445}
+    \hfill\hspace{0.2em} \break \hspace{0.2em}
+    {\bfseries{LinkedIn:}} \href{https://www.linkedin.com/in/dmitrii-shikhaleev/}{linkedin.com/in/dmitrii-shikhaleev}
+}
+
+\renewcommand{\maketitle}{
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    {\Huge\color{ColorBlack}\textbf{\theauthor}} \hfill\vspace{0.6em}\break
+    {\Large{\thetitle}} \hfill\vspace{0.8em}\break
+    % \thelocation \hfill\vspace{0.4em}\break
+    \thecontacts \hfill\vspace{0.4em}\break
+
+  \end{minipage}
+  \hfill
+  % \begin{minipage}[t]{0.3\textwidth}
+  %   \vspace{-\baselineskip} % Required for vertically aligning minipages
+  %   \begin{flushright}
+  %   \includegraphics[width=93pt, height=110pt]{photo.jpg}
+  %   \end{flushright}
+  % \end{minipage}
+}
+
+
+\newcommand{\makelettertitle}{
+    \textbf{Recruitment Team}\hfill \cvdate{\today}\break
+    SAP SE \hfill\break
+    Waldorf, Germany
+}
 
 \begin{document}
 
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{July 09, 2023}
-\opening{Dear Hiring Team,}
-\closing{Sincerely,}
+\maketitle
+
 \makelettertitle
 
-I would like to submit my resume for your consideration regarding the position of
-Innovation Product Associate/Engineer im Center of Expertise (ID: 171260).
+Dear Hiring Team,
 
-I attained a bachelor’s degree in nanoelectronics at St. Petersburg Polytechnic University.
-While doing so I’ve got interested in IT and new technologies which allowed me to attain
-a strong foundation of technical skills including knowledge of operation systems and
-programming languages such as C, Python, R and JavaScript. In my recent position I work
-in a small team where I am responsible for development and optimization of web
-application.
+I'm excited to apply for the Senior Typescript Engineer role at Supertab, where I can leverage my expertise in buiding application and software engineering to help customers.
 
-In my current position I constantly encounter complex problems, which I solve using
-experience I collected working in different areas. I like to take on challenging tasks and I
-perform well under pressure. I am used to work on projects that are outside my current
-zone of expertise so I often have to acquire the knowledge needed in short time.
-As an employee of a small company I would like to further challenge myself and work on
-big-scaled projects in accordingly sized teams. {COMPANYNAME} as a worldwide leader in
-business-oriented applications is such a company and I would gladly join and contribute
-to its success.
+% With over 8 years of experience as a Fullstack Engineer, I've developed a strong foundation in developing and integrating microservices using JavaScript, Java, and industry-leading frameworks. My proficiency in cloud-based infrastructure, including AWS, GCP, and serverless technologies, enables me to drive business agility and efficiency. 
 
-Thank you for your time and consideration. I looking forward to speaking with you about
-this opportunity.
+% As I reflect on my career journey, I realize that my passion for software engineering, combined with my experience working with cross-functional teams, has led me to become a problem solver with a strong technical background. My achievements in improving codebase health, optimizing API specifications, and delivering value have not only enhanced my skills but also given me a unique perspective on what makes a successful team dynamic.
 
-\makeletterclosing
+% I'm particularly drawn to this role because I believe that my blend of technical expertise, problem-solving skills make me a good fit for this position. My strong understanding of cloud-based infrastructure, combined with my ability to drive system performance improvements, would enable me to effectively resolve critical production issues.
+
+I am a software developer with more than 8 years of experience. My focus is on building products based on web
+technologies. I am used to working on things that are outside my current area of expertise so I often have to acquire the
+necessary knowledge in a short period of time. I’m quite flexible with technologies and have gained a lot of experience
+working in different areas.
+
+My main strength lay in frontend field developing web application with react ecosystem. But I also have solid production
+experience working with backend, cloud infrastructure, on‐premises orchestration solution. My previous experience
+has given me a solid technical background, understanding of software development processes and communication
+skills. In my current position, I have worked with a variety of projects and domains with and without team members.
+I’ve held key developer positions and delivered several products to the MVP/first customer stage. In my previous project, besides from frontend responsibilities, I was also tasked to implement backend functionality using the same tech stack as in the job listing: pydantic, sqlalchemy, fastapi, postgresql. I also pushed for better management of api specification (openapi schema).
+
+As an employee of a large software engineering services company, I want to continue to challenge myself and work on
+great products with long‐term ownership over product or codebase.
+
+% With its commitment to innovation and customer satisfaction, I believe that SAP's values align with my own passion for delivering high-quality solutions. I'm excited about the prospect of joining a team that shares my enthusiasm for software engineering and collaboration.
+
+Thank you for your time and consideration. I looking forward to speaking with you about this opportunity.
+
+Sincerely,
+
+\theauthor
 
 \end{document}

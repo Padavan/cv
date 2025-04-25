@@ -1,114 +1,203 @@
-%!TEX output_directory=dist
-\documentclass[11pt, a4paper, sans]{moderncv}
-\moderncvstyle{banking}
-\moderncvcolor{blue}
+\documentclass[11pt, a4paper]{article} 
+
 \usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
 \usepackage{latexsym}
-\usepackage[scale=0.8, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[skip=12pt plus10pt, indent=0pt]{parskip}
+\usepackage{setspace}
+\usepackage{graphicx}
 
-% blue color scheme colors
-\definecolor{color0}{rgb}{0,0,0}% black
-\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
-\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+% xcolor setup
+\definecolor{ColorBlack}{RGB}{0,0,0}% black
+\definecolor{ColorBlue}{RGB}{50,103,161} % two tone darker blue
+\definecolor{ColorLightGrey}{RGB}{220,220,220}% light grey for titlerule
+\definecolor{ColorGrey}{RGB}{90,90,90} % date emphasis
 
-\name{Dmitrii}{Shikhaleev}
-\title{Software Engineer} 
-\address{Turkiye, Antalya}
-\social[linkedin]{dmitrii.shikhaleev} 
-\social[github]{Padavan}
-\phone[mobile]{+7~(960)~240~8223}
-\email{dmitrii.shikhaleev@gmail.com}
+% hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=ColorBlue,
+    filecolor=magenta,      
+    urlcolor=ColorBlue,
+    pdftitle={CV},
+    pdfpagemode=FullScreen,
+}
+
+\author{Dmitrii Shikhaleev}
+\title{Senior Fullstack Engineer}
+
+\titleformat{\section}
+{\Large\bfseries\color{ColorBlack}}
+{}
+{0em}
+{}[{\color{ColorLightGrey}\titlerule[1pt]}]
+
+\titlespacing*{\section}
+{0pt}{10pt}{10pt}
+
+\newcommand{\cvdate}[1]{
+    {\small\narrower\normalfont\color{ColorGrey}{#1}}
+}
+\newcommand{\cvposition}[1]{\normalsize\textbf{#1}}
+\newcommand{\cvcompany}[1]{\large\textbf{#1}}
+\newcommand{\cvproject}[1]{
+    \begingroup
+    \fontseries{sb}\color{ColorGrey}\small{#1}
+    \endgroup
+}
+
+\newcommand{\cventry}[5]{
+    % \vspace{0.5em}
+    \cvcompany{#1} \hfill \cvdate{#3}\vspace{8pt}\break
+    \cvposition{#2} \hfill           \vspace{4pt}\break
+    % \vspace{0pt}\break
+    \normalfont{#4} \hfill           \vspace{2pt}\break
+    #5
+}
+
+\newcommand{\divider}{
+    {\color{ColorGrey}|}
+}
+
+\newcommand{\thecontacts}{
+    {\bfseries{Visa:}} Germany Opportunity Card \hfill
+    \hfill\hspace{0.2em} \break \hspace{0.2em}
+    {\bfseries{Mail:}} \href{mailto:dmitrii.shikhaleev@gmail.com}{dmitrii.shikhaleev@gmail.com}
+    \hfill\hspace{0.2em} \break \hspace{0.2em} 
+    {\bfseries{Phone:}} \href{tel:+905312587445}{+905312587445}
+    \hfill\hspace{0.2em} \break \hspace{0.2em}
+    {\bfseries{LinkedIn:}} \href{https://www.linkedin.com/in/dmitrii-shikhaleev/}{linkedin.com/in/dmitrii-shikhaleev}
+}
+
+\renewcommand{\maketitle}{
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    {\Huge\color{ColorBlack}\textbf{\theauthor}} \hfill\vspace{0.6em}\break
+    {\Large{\thetitle}} \hfill\vspace{0.8em}\break
+    % \thelocation \hfill\vspace{0.4em}\break
+    \thecontacts \hfill\vspace{0.4em}\break
+
+  \end{minipage}
+  \hfill
+  % \begin{minipage}[t]{0.3\textwidth}
+  %   \vspace{-\baselineskip} % Required for vertically aligning minipages
+  %   \begin{flushright}
+  %   \includegraphics[width=93pt, height=110pt]{photo.jpg}
+  %   \end{flushright}
+  % \end{minipage}
+}
+
+% \newcommand{\cvlistitem}[1]{
+%   \begin{minipage}[t]{\textwidth}
+%   \hangindent=1.6em
+%   % \hangafter=1
+%   \strut\hspace{0.4em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}\hspace{0.4em}#1
+%   \vspace{3pt}
+%   \end{minipage}
+% }
+
+
+
+\pagenumbering{gobble}
 
 \begin{document}
-\makecvtitle
-% TITLE
-% \textcolor{color1}{\textbf{\Huge Dmitrii Shikhaleev}} \par
-% \vspace{0.2cm}
-% \textcolor{color2}{\Large Software Engineer} \par
-% \vspace{0.2cm}
+\begin{spacing}{1.1}
+\maketitle
 
-% \textcolor{color2}{\small
-%     \href{tel:+905312587445}{+905312587445}
-%     % \hspace{0.2cm}
-%     $\bullet$
-%     % \hspace{0.2cm}
-%     \href{mailto://dmitrii.shikhaleev@gmail.com}{dmitrii.shikhaleev@gmail.com}
-%     % \hspace{0.2cm}
-%     $\bullet$
-%     % \hspace{0.2cm}
-%     Antalya, Turkey
-% }
+\section{Summary}
 
-% \textcolor{color2}{\small
-%     \href{https://www.linkedin.com/in/dmitrii-shikhaleev}{linkedin.com/in/dmitrii-shikhaleev}
-%     $\bullet$
-%     \href{https://github.com/Padavan}{github.com/Padavan}
-% }
+Experienced Fullstack Engineer with over 7 years of experience. Expertise in developing and integrating microservices using JavaScript, Python, and industry-leading frameworks. Proficient in leveraging cloud-based infrastructure to drive business agility and efficiency. Adept at building and iterating product functionality, solving technical challenges and participating in the product development cycle. Experienced in working within a cross‐functional, agile team, applying Agile values \& principles. Strong English language proficiency and ability to collaborate and mentor team members.
 
-% \vspace{0.4cm}
-
-% PROFILE
-\section{Profile}
-Front-End Software Engineering professional with 5+ year of production experience. My main focus is on building products based on web technologies. I've been able to be flexible and deliver quickly. 
-
-
-% SKILLS
+% SKILLS ------------------------------
 \section{Skills}
-% \addvspace{0.2cm}
+\begin{itemize}[leftmargin=20pt,label=\strut\hspace{0.4em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}, itemsep=-8pt]
+  \item Programming Languages: Typescript/Javascript, Python
+  \item Web: React, redux, Node.js, GraphQL, REST Api, webpack, Jest, Electron.js, REST, Web APIs
+  \item Cloud: AWS, GCP, serverless, Firebase
+  \item CI/CD: CI/CD pipelines, husky, Kubernetes, Monitoring services
+  \item Tools: Docker, Unix tools, UML diagrams, OpenAPI
+  \item Lean development: Agile values and principles, SDLC
+  \item Languages: English (B2), German (A2), Russian - native
+\end{itemize}
 
-\cvlistitem{Extensive experience and knowledge of the React ecosystem.}
-\cvlistitem{Proficient working with JavaScript as well as TypeScript. Experience with Node.js and Electron.}
-\cvlistitem{Worked with various State management systems for React - Redux, Mobx, Zustand, XState.}
-\cvlistitem{Experience with GraphQL, REST.}
-\cvlistitem{Experience with WebApi (Web Workers, Web Sockets, Chrome extension development).}
-\cvlistitem{Solid understanding of CSS and CSS post/preprocessors.}
-\cvlistitem{Experience with a variety of JS libraries (D3.js, moment.js, ag-grid, RxJS, lodash).}
-\cvlistitem{Agile. Participation in Scrum activities, daily communication with the customer.}
-\cvlistitem{Experience with Linux. Basic bash/python scripting and good understanding of UNIX tools.}
-\cvlistitem{Know what CI/CD is. Builded Docker containers, worked with AWS services, kubernetes.}
-\cvlistitem{Experienced in distributed development and remote collaboration.}
-\cvlistitem{Languages. English - advanced, Russian - native}
-
-% EXPERIENCE ----------------------------------------------------------------------------------------------------------
-\section{Experience}
+% EXPERIENCE --------------------------------
+\section{Professional Experience}
 
 %% EPAM
-\textbf{\Large EPAM Systems Inc.} \par\addvspace{0.1cm}
-\cvitem{Software Engineer}{Jan 2019 --- Present}
+\cventry
+{EPAM Systems Inc.}
+{Senior Software Engineer}
+{January 2019 -- Present}
+{EPAM Systems is a technology company that offers software engineering services for software development and digital platforms.}
+{
+\textbf{Responsibilities:}
 
-\textit{EPAM Systems is a technology company that offers software engineering services for software development and digital platforms. I worked for a diverse range of clients in web development. Current and former clients include Adidas AG, Sygenta AG, Vizgen Inc, Mursion Inc.}
-\vspace{0.2cm}
+\begin{itemize}[leftmargin=20pt,label=\strut\hspace{0.4em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}, itemsep=-8pt]
+  \item Delivered applications for clients in pharmaceutical, retail, biotech, and EdTech sectors.
+  \item Built and optimized applications with Electron.js and Node.js, integrated with Cloud Infrastructure.
+  \item Seamlessly transitioned between frontend and backend technologies, delivering end-to-end solutions and ensuring cohesive user experiences.
+  \item Developed web applications using React and micro-frontend architecture.
+  \item Implemented socket connections and managed inter-process communication between services.
+  \item Enhanced system performance and cloud integration, applying finite state machine state management, parallelism techniques and knowledge of cloud specifics
+  \item Supported codebase with tests and facilitated smooth development of automated tests with testid and semantic HTML to ensure code quality and reliability.
+  \item Utilized Git for version control and collaboration.
+  \item Facilitated efficient collaboration with backend teams and streamlined communication processes.
+  \item Practiced Agile values and principles including Scrum activities such as daily meetings, sprint planning, and retrospectives.
+  \item Led code reviews, solution design, conduct interview for new candidates and task breakdown, ensuring non-blockable code delivery and high availability.
+\end{itemize}
 
-\cvlistitem{Have delivered multiple products to MVP/first customer stage.}
-\cvlistitem{Participated in scrum activities: daily meetings with customers, sprint plannings, groomings, retrospectives, performed task breakdown, efforts estimation.}
-\cvlistitem{Conducted demo sessions.}
-\cvlistitem{Successfully maintained multiple long-term projects.}
-\cvlistitem{Achieved self-sufficiency, so productivity wasn't decreased in absence of senior engineers.}
-\cvlistitem{Deploying/Integrating cloud solutions.}
-\cvlistitem{Implementing CI/CD pipeline.}
-\cvlistitem{Implemented auth processes through SSO/cloud services.}
-\cvlistitem{Implemented Microfrontend architecture based on Webpack Module Federation.}
+\textbf{Achievements:}
 
-\vspace{1em}
+\begin{itemize}[leftmargin=20pt,label=\strut\hspace{0.4em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}, itemsep=-8pt]
+\item Improved Codebase Health: Enhanced type safety and refactored frontend code within one month. Optimized API specifications, reduced code maintenance, and restored trust in UI-kit components by fixing critical bugs.
+\item Delivered Contract Efficiently: Fulfilled a fixed-price contract in one month, leading a team of three engineers to develop and deploy a cloud infrastructure solution, meeting client requirements with minimal initial planning.
+\item Optimized AWS Lambda: Reduced AWS Lambda response times by 50\%, achieving sub-second performance despite limited prior experience.
+\end{itemize}
+}
+
+
 %% Chronist
-\textbf{\Large Chronist LLC} \par\addvspace{0.1cm}
-\cvitem{Software Engineer}{Jan 2017 --- Jan 2019}
+\cventry
+{Chronist LLC.}
+{Software Engineer}
+{January, 2017 -- January, 2019}
+{Chronist is an online learning platform with an interactive map that lets users explore different time periods. Users can also create their own stories by linking events and places using the system of layers.}
+{\textbf{Responsibilities:}
 
-\textit{Chronist is an educational online platform that offers interactive map and the possibility to travel in time on this map. Apart from that the system of layers allows users to create their own narratives based on the interconnections of certain events and environments.}
-\vspace{0.2cm}
+\begin{itemize}[leftmargin=20pt,label=\strut\hspace{0.4em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}, itemsep=-8pt]
+  \item Participated in design discussions and decision-making processes to refine the project scope.
+  \item Implemented mock-ups for the front-end interface of the MVP (Minimum Viable Product).
+  \item Developed the landing page for the project, ensuring it aligns with the overall design and functionality.
+  \item Calculated and implemented animations and map interaction tasks, enhancing user experience and interface engagement.
+\end{itemize}
 
-\cvlistitem{Took part in design discussions/decision-making processes.}
-\cvlistitem{Implementing mockups for frontend interface for MVP.}
-\cvlistitem{Built the landing page for the project.}
-\cvlistitem{Made calculations and implementation for several animation and maps interaction tasks.}
+}
 
-% EDUCATION ------------------------------------------------------------------------------------------------------------
+% EDUCATION
 \section{Education}
-\textbf{\Large Peter the Great St.Petersburg Polytechnic University} \par\addvspace{0.1cm}
-\cvitem{Bachelor}{2008 --- 2016}
-Electronics and Nanoelectronics
 
-\vspace{9em}
+\cventry
+{Peter the Great St.Petersburg Polytechnic University}
+{Bachelor in Electronics and Nanoelectronics}
+{September, 2008 -- June, 2016}
+{Defended my thesis ``Photodiodes based on ZnCdTe heterostructure on silicon substrate'' with an excellent grade.}
 
 
+% \section{Certificates/Educational programs}
+
+% \begin{itemize}[leftmargin=20pt,label=\strut\hspace{0.4em}\textcolor{ColorBlue}{\large\rmfamily\textbullet}, itemsep=-8pt]
+%   \item Participated in design discussions and decision-making processes to refine the project scope.
+%   \item Implemented mock-ups for the front-end interface of the MVP (Minimum Viable Product).
+%   \item Developed the landing page for the project, ensuring it aligns with the overall design and functionality.
+%   \item Calculated and implemented animations and map interaction tasks, enhancing user experience and interface engagement.
+% \end{itemize}
+
+\end{spacing}
 \end{document}
